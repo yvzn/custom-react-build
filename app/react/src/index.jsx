@@ -3,8 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const e = React.createElement;
-
 class ClickableButton extends React.Component {
   constructor(props) {
     super(props);
@@ -16,13 +14,13 @@ class ClickableButton extends React.Component {
       return 'You clicked this.';
     }
 
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Button'
+    return (
+      <button onClick={() => this.setState({ liked: true })}>
+        Button
+      </button>
     );
   }
 }
 
 const domContainer = document.querySelector('main');
-ReactDOM.render(e(ClickableButton), domContainer);
+ReactDOM.render(<ClickableButton />, domContainer);
