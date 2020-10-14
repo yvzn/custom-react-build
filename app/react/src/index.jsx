@@ -3,6 +3,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "./index.scss";
+
 class ClickableButton extends React.Component {
   constructor(props) {
     super(props);
