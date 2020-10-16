@@ -18,7 +18,7 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "ignorePatterns": ["*.scss"],
+    "ignorePatterns": ["*.scss", "*.html"],
     "rules": {
     },
     "settings": {
