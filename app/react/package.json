@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run bundle",
-    "prebuild": "npm run format && npm run lint",
-    "bundle": "webpack",
-    "lint": "eslint src/*",
-    "format": "prettier --write src/*"
+    "prebuild": "npm run format:all && npm run lint:all",
+    "build": "npm run build:all",
+    "build:all": "webpack",
+    "lint:all": "eslint src/*",
+    "format:all": "prettier --write src/*"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/yvzn/frosto#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
@@ -38,7 +39,9 @@
     "webpack-cli": "^4.0.0"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "regenerator-runtime": "^0.13.7"
   }
 }
